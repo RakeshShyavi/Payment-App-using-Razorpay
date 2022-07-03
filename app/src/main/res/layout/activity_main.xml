@@ -6,27 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter Student name"
+        android:textAlignment="center"
+        android:inputType="textCapCharacters" />
+    <EditText
+        android:id="@+id/usn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter Student USN"
+        android:textAlignment="center"
+        android:inputType="textCapCharacters" />
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter phone number"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="300dp"
+        android:hint="Enter email ID"
+        android:layout_centerHorizontal="true"
+        android:inputType="textEmailAddress" />
+
     <!--EditText text to enter amount-->
     <EditText
-        android:id="@+id/idEdtAmount"
-        android:layout_width="match_parent"
+        android:id="@+id/idAmount"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:hint="Enter amount to be payed"
+        android:textAlignment="center"
+        android:layout_marginTop="340dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter amount to be paid"
         android:inputType="number" />
 
     <!--button to make payment-->
+
+
+
     <Button
         android:id="@+id/idBtnPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtAmount"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="400dp"
         android:text="Pay using RazorPay"
         android:textAllCaps="false" />
 
