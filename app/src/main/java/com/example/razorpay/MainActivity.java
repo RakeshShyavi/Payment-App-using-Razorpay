@@ -1,9 +1,13 @@
 package com.example.razorpay;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -24,11 +28,14 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
     private EditText idemail;
     private EditText idphone;
     private Button payBtn;
+    private Bundle savedInstanceState;
 
+    @SuppressLint("MissingSuperCall")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupHyperlink();
 
         // initializing all our variables.
         amountEdt = findViewById(R.id.idAmount);
@@ -92,7 +99,23 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
                 }
             }
         });
+
+//code for hyperlinks
+
     }
+    private void setupHyperlink() {
+        TextView linkTextView1 = findViewById(R.id.phone_hyperlink);
+        linkTextView1.setMovementMethod(LinkMovementMethod.getInstance());
+        linkTextView1.setLinkTextColor(Color.BLACK);
+
+
+        TextView linkTextView2 = findViewById(R.id.email_hyperlink);
+        linkTextView2.setMovementMethod(LinkMovementMethod.getInstance());
+        linkTextView2.setLinkTextColor(Color.BLACK);
+
+
+    }
+
 
     @Override
     public void onPaymentSuccess(String s) {
@@ -110,4 +133,5 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
         // on payment failed.
         Toast.makeText(this, "Payment Failed due to error : " + s, Toast.LENGTH_SHORT).show();
     }
+
 }

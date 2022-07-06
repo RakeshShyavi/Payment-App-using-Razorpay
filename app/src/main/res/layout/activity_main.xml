@@ -1,61 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="FEES PAYMENT APP"
+        android:textAlignment="viewStart"
+        android:textColor="#278A1D"
+        android:textSize="70px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="55dp"
+        android:text="Bangalore Institue of Technology\nK. R. Road, V. V. Puram\nBangalore - 560002"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35px" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="92dp"
+        android:layout_height="99dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40px"
+        app:srcCompat="@drawable/logo1" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="330px"
+        android:background="#111111" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="For academic year 2022-23"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#278A1D"
+        android:textSize="60px" />
+
     <EditText
         android:id="@+id/name"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
         android:layout_centerHorizontal="true"
-        android:hint="Enter Student name"
-        android:textAlignment="center"
-        android:inputType="textCapCharacters" />
+        android:layout_marginTop="180dp"
+        android:hint="ENTER STUDENT NAME"
+        android:inputType="textCapCharacters"
+        android:textAlignment="center" />
+
     <EditText
         android:id="@+id/usn"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
         android:layout_centerHorizontal="true"
-        android:hint="Enter Student USN"
-        android:textAlignment="center"
-        android:inputType="textCapCharacters" />
+        android:layout_marginTop="220dp"
+        android:hint="ENTER STUDENT USN"
+        android:inputType="textCapCharacters"
+        android:textAlignment="center" />
+
     <EditText
         android:id="@+id/phone"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="260dp"
         android:layout_centerHorizontal="true"
-        android:hint="Enter phone number"
-        android:inputType="number" />
+        android:layout_marginTop="260dp"
+        android:hint="ENTER PHONE NUMBER"
+        android:inputType="number"
+        android:textAlignment="center" />
+
     <EditText
         android:id="@+id/email"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="300dp"
-        android:hint="Enter email ID"
         android:layout_centerHorizontal="true"
-        android:inputType="textEmailAddress" />
+        android:layout_marginTop="300dp"
+        android:hint="ENTER EMAIL ID"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center" />
 
     <!--EditText text to enter amount-->
     <EditText
         android:id="@+id/idAmount"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="340dp"
         android:layout_centerHorizontal="true"
-        android:hint="Enter amount to be paid"
-        android:inputType="number" />
+        android:layout_marginTop="340dp"
+        android:hint="ENTER AMOUNT TO BE PAID"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="390dp"
+        android:text="Note: Don't forget to note your payment ID once the payment is successful."
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="30px"
+        android:textStyle="bold" />
 
     <!--button to make payment-->
-
 
 
     <Button
@@ -63,8 +125,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="420dp"
+        android:backgroundTint="#278A1D"
         android:text="Pay using RazorPay"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="#F6F6F6"
+        app:iconTint="#111111" />
+
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="650dp"
+        android:text="For inquiry:"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textSize="35px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/phone_hyperlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="670dp"
+        android:text="@string/hyperlink"
+        android:textColor="#CC5757"
+        android:textSize="25px"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintVertical_bias="0.788" />
+
+    <TextView
+        android:id="@+id/email_hyperlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="685dp"
+        android:text="@string/hyperlink2"
+        android:textColor="#CC5757"
+        android:textSize="25px"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintVertical_bias="0.788" />
+
 
 </RelativeLayout>

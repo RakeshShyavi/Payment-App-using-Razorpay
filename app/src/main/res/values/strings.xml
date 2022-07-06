@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Razorpay</string>
+    <string name="app_name">Fees Payment</string>
+    <string name="hyperlink"><a href="tel:+919482939277">+919482939277</a></string>
+    <string name="hyperlink2"><a href="mailto:nprateek24@gmail.com">nprateek24@gmail.com</a></string>
+
 </resources>
